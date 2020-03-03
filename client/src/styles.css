@@ -1,0 +1,82 @@
+/* #root {
+  background-color: black;
+} */
+#logoimg {
+  max-height: 100px !important;
+  /* padding: 0 0 !important; */
+  padding-bottom: 5px !important;
+}
+
+#logoimg:hover {
+  transform: scale(1.1);
+}
+
+#login:hover,
+#about:hover,
+#contact:hover {
+  transform: scale(1.2);
+}
+
+#logout:hover {
+  transform: scale(0.5);
+  background-color: red;
+}
+.nav-wrapper ul li {
+  display: inline-block;
+}
+
+.nav-wrapper {
+  text-align: center;
+}
+
+.parallax-container {
+  height: 350px;
+}
+
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: orange;
+}
+.input-field input[type="email"]:focus + label {
+  color: orange;
+}
+textarea:focus.materialize-textarea + label {
+  color: orange;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid orange;
+  box-shadow: 0 1px 0 0 orange;
+}
+/* label underline focus color */
+.input-field input[type="email"]:focus {
+  border-bottom: 1px solid orange;
+  box-shadow: 0 1px 0 0 orange;
+}
+.input-field textarea:focus {
+  border-bottom: 1px solid orange;
+  box-shadow: 0 1px 0 0 orange;
+}
+
+.aboutUs {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 40px/1 "berkshire-swash", Helvetica, sans-serif;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.contactUs {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 56px/1 "chicle", Helvetica, sans-serif;
+  color: black;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+footer.page-footer {
+  background-color: black;
+}
