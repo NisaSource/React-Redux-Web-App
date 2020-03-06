@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import Dashboard from "./Dashboard";
+import List from "./List";
 
 class App extends Component {
   componentDidMount() {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/contactus" component={ContactUs} />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/surveys" component={Dashboard} />
+            <Route exact path="/surveylist" component={List} />
             <Footer />
           </div>
         </BrowserRouter>

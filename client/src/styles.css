@@ -20,7 +20,8 @@ h3 {
 
 #login:hover,
 #about:hover,
-#contact:hover {
+#contact:hover,
+#surveyList:hover {
   transform: scale(1.2);
 }
 

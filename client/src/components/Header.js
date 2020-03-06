@@ -54,6 +54,15 @@ class Header extends Component {
                   About Us
                 </a>
               </li>
+              <li>
+                <a
+                  id="surveyList"
+                  className="darken-5 orange-text right"
+                  href="surveylist"
+                >
+                  Survey List
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
