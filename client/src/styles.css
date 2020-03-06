@@ -1,6 +1,13 @@
 /* #root {
   background-color: black;
 } */
+
+h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #logoimg {
   max-height: 100px !important;
   /* padding: 0 0 !important; */
@@ -79,4 +86,5 @@ textarea:focus.materialize-textarea + label {
 }
 footer.page-footer {
   background-color: black;
+  margin-top: 50px;
 }
