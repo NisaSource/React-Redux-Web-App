@@ -5,7 +5,7 @@ import formFields from "./formFields";
 import { withRouter } from "react-router-dom";
 import * as actions from "../../actions";
 
-const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
+const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
       <div key={name}>
@@ -27,7 +27,9 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
         <i className="material-icons orange-text">arrow_back</i>
       </button>
       <button
-        onClick={() => submitSurvey(formValues, history)}
+        onClick={() =>
+          submitSurvey(formValues).then(() => window.location.reload())
+        }
         className="btn-floating btn-large orange pulse right"
         style={{ marginTop: "20px" }}
       >
