@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import logo from "./image/logo.png"; // Tell webpack this JS file uses this image
+import logo from "./image/logo.png";
 
 class Header extends Component {
   renderContent() {
@@ -10,21 +10,39 @@ class Header extends Component {
         return;
       case false:
         return (
-          <a id="login" href="/auth/google" className="darken-5 orange-text">
-            Login With Google
-          </a>
+          <li className="right">
+            <a id="login" href="/auth/google" className="darken-5 orange-text">
+              Login With Google
+            </a>
+          </li>
         );
       default:
         return (
-          <a id="logout" href="/api/logout" className="darken-5 orange-text">
-            Logout
-          </a>
+          <Fragment>
+            <li className="right">
+              <a
+                id="logout"
+                href="/api/logout"
+                className="darken-5 orange-text"
+              >
+                Logout
+              </a>
+            </li>
+            <li className="right">
+              <a
+                id="surveyList"
+                className="darken-5 orange-text right"
+                href="surveylist"
+              >
+                Survey List
+              </a>
+            </li>
+          </Fragment>
         );
     }
   }
 
   render() {
-    //console.log(this.props);
     return (
       <Fragment>
         <div className="black" style={{ margin: "0px", textAlign: "center" }}>
@@ -39,7 +57,7 @@ class Header extends Component {
         <nav className="black">
           <div className="nav-wrapper">
             <ul className="darken-5 orange-text">
-              <li className="right">{this.renderContent()}</li>
+              {this.renderContent()}
               <li>
                 <a
                   id="contact"
@@ -54,15 +72,6 @@ class Header extends Component {
                   About Us
                 </a>
               </li>
-              <li>
-                <a
-                  id="surveyList"
-                  className="darken-5 orange-text right"
-                  href="surveylist"
-                >
-                  Survey List
-                </a>
-              </li>
             </ul>
           </div>
         </nav>
@@ -72,7 +81,6 @@ class Header extends Component {
 }
 
 function mapStateToProps({ auth }) {
-  //console.log("auth", auth);
   return {
     auth
   };
